@@ -1,0 +1,339 @@
+/* White/Cream Container Backgrounds for Selection Grids */
+.beverage-grid,
+.drink-options-grid,
+.selection-container {
+  background: #fff !important;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+.beverage-grid.cream,
+.drink-options-grid.cream,
+.selection-container.cream {
+  background: var(--sb-cream) !important;
+}
+/* Override green backgrounds for selection sections */
+.selection-section,
+.beverage-selection,
+.drink-selection {
+  background: #fff !important;
+}
+.selection-section.cream,
+.beverage-selection.cream,
+.drink-selection.cream {
+  background: var(--sb-cream) !important;
+}
+/* Utility: SB Dark Green Background */
+/* Utility: SB Dark Green Background */
+.bg-sb-dark-green {
+  background: var(--sb-dark-green) !important;
+  color: var(--sb-cream) !important;
+}
+/* Utility: SB Light Green Background */
+.bg-sb-light-green {
+  background: var(--sb-light-green) !important;
+  color: var(--sb-dark-green) !important;
+}
+.bg-sb-lighter-green {
+  background: var(--sb-light-green) !important;
+  color: var(--sb-dark-green) !important;
+}
+/* Utility: Brand Primary Background */
+.bg-brand-primary {
+  background: var(--sb-light-green) !important;
+  color: var(--sb-dark-green) !important;
+}
+
+/* Utility: Accent Gold Background */
+.bg-accent-gold {
+  background: var(--accent-gold) !important;
+  color: var(--sb-dark-green);
+}
+
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+
+
+
+
+/* Dark (default) */
+:root {
+  /* Brand */
+  --sb-green: #00704A;
+  --sb-dark-green: #1E3932;
+  --sb-light-green: #D4E9E2;
+  --sb-lighter-green: #F7F7F7;
+
+  /* Neutrals / Surfaces */
+  --sb-cream: #FFFFFF;
+  --sb-beige: #EDE9E4;
+  --sb-brown: #362415;
+
+  --surface-0: #FFFFFF;  /* page */
+  --surface-1: #D4E9E2;  /* card */
+  --surface-2: #E8E8E8;  /* hover */
+
+  /* Text */
+  --text-1: #000000;
+  --text-2: #707070;
+  --text-3: #B8B8B8;
+
+  /* Accents */
+  --accent-gold: #CBA258;
+  --accent-cream: #F7F7F7;
+  --accent-warm: #F28E1C;
+
+  /* UI */
+  --radius: 12px;
+  --ring: #1E3932;
+  --shadow-soft: 0 4px 12px rgba(0,0,0,.12);
+  --shadow-strong: 0 10px 25px rgba(0,0,0,.15);
+}
+
+/* Light mode */
+:root[data-theme="light"] {
+  --surface-0: #fbfaf7;
+  --surface-1: #ffffff;
+  --surface-2: #f2efe8;
+
+  --text-1: #1e2a24;
+  --text-2: #41524a;
+  --text-3: #6a7a73;
+
+  --ring: #d9e3dd;
+}
+
+/* Base */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: #000;
+  background: var(--sb-lighter-green);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 .5rem;
+  color: #000;
+  font-weight: 700;
+}
+p { margin: 0 0 1rem; color: #000; }
+
+/* Containers */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 24px;
+}
+
+
+/* Card and Info Boxes */
+/* Card and Info Boxes */
+/* Card and Info Boxes (including beverage-card, drink-option-card, tile) */
+/* Card and Info Boxes (including beverage-card, drink-option-card, tile) */
+/* Card and Info Boxes (including beverage-card, drink-option-card, tile) */
+.card,
+.nutrition-box,
+.beverage-card,
+.drink-option-card,
+.tile {
+  background: var(--sb-light-green);
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 14px 18px;
+  margin: 8px;
+  transition: background .15s ease, box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+  color: var(--sb-dark-green);
+  height: auto;
+  min-height: 0;
+}
+.loyalty-box,
+.price-breakdown-box {
+  background: var(--sb-light-green);
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 16px 20px;
+  transition: background .15s ease, box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+  color: var(--sb-dark-green);
+}
+/* Force all text and icons in cards to dark green */
+/* Force all text and icons in cards to dark green */
+.card *,
+.nutrition-box *,
+.beverage-card *,
+.drink-option-card *,
+.tile *,
+.loyalty-box *,
+.price-breakdown-box * {
+  color: var(--sb-dark-green) !important;
+}
+/* Force SVG icons in cards to dark green */
+.card svg,
+.nutrition-box svg,
+.beverage-card svg,
+.drink-option-card svg,
+.tile svg,
+.loyalty-box svg,
+.price-breakdown-box svg {
+  color: var(--sb-dark-green) !important;
+  fill: var(--sb-dark-green) !important;
+}
+/* Card hover: subtle lift and lighter background */
+.card:hover,
+.nutrition-box:hover,
+.beverage-card:hover,
+.drink-option-card:hover,
+.tile:hover {
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(30,57,50,0.10);
+  transform: translateY(-3px) scale(1.01);
+}
+.loyalty-box:hover,
+.price-breakdown-box:hover {
+  background: #eaf6f2;
+  box-shadow: 0 8px 24px rgba(30,57,50,0.10);
+  transform: translateY(-3px) scale(1.01);
+}
+/* Card active/selected state */
+.card--active,
+.beverage-card--active,
+.drink-option-card--active,
+.tile--active {
+  background: var(--sb-light-green) !important;
+  border-color: var(--sb-dark-green) !important;
+  box-shadow: 0 0 0 2px var(--sb-dark-green), var(--shadow-soft);
+}
+/* Target headings, paragraphs, spans, and divs inside light backgrounds for dark text */
+.bg-sb-light-green h1,
+.bg-sb-light-green h2,
+.bg-sb-light-green h3,
+.bg-sb-light-green h4,
+.bg-sb-light-green h5,
+.bg-sb-light-green h6,
+.bg-sb-light-green p,
+.bg-sb-light-green span,
+.bg-sb-light-green div,
+.bg-sb-lighter-green h1,
+.bg-sb-lighter-green h2,
+.bg-sb-lighter-green h3,
+.bg-sb-lighter-green h4,
+.bg-sb-lighter-green h5,
+.bg-sb-lighter-green h6,
+.bg-sb-lighter-green p,
+.bg-sb-lighter-green span,
+.bg-sb-lighter-green div {
+  color: var(--sb-dark-green) !important;
+}
+/* Utility: readable text */
+.text-readable {
+  color: var(--sb-dark-green) !important;
+}
+
+/* Button */
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--sb-dark-green);
+  color: var(--sb-cream);
+  box-shadow: var(--shadow-soft);
+  transition: filter .15s ease, transform .02s ease;
+}
+.btn:hover { filter: brightness(0.95); }
+.btn:active { transform: translateY(1px); }
+.btn--outline {
+  background: transparent;
+  color: var(--sb-dark-green);
+  border: 1px solid var(--sb-dark-green);
+}
+
+/* Inputs */
+.input, .select, .textarea {
+  width: 100%;
+  background: var(--surface-2);
+  color: var(--text-1);
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  outline: none;
+}
+.input:focus, .select:focus, .textarea:focus {
+  border-color: var(--sb-light-green);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--sb-light-green) 30%, transparent);
+}
+
+/* Pills / Tags */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--ring);
+  color: var(--text-2);
+}
+
+/* Utility helpers */
+.text-muted { color: var(--text-3); }
+.text-accent { color: var(--accent-gold); }
+/* Updated: Use light green background and dark green text for base cards, but allow override for wrappers */
+.bg-green {
+  background: var(--sb-light-green) !important;
+  color: var(--sb-dark-green) !important;
+}
+/* If .bg-green is used on a grid or wrapper, allow .bg-green.bg-white to force white background */
+.bg-green.bg-white, .bg-green.bg-surface, .bg-green[data-bg="white"] {
+  background: #fff !important;
+  color: var(--sb-dark-green) !important;
+}
+/* Utility: force dark green text/icons */
+.text-dark-green {
+  color: var(--sb-dark-green) !important;
+  fill: var(--sb-dark-green) !important;
+}
+.border { border: 1px solid var(--ring); border-radius: var(--radius); }
+.round { border-radius: var(--radius); }
+.shadow { box-shadow: var(--shadow-soft); }
+
+/* Starbucks-like selection tile */
+.tile {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  padding: 16px;
+  background: var(--surface-1);
+  border: 1px solid var(--ring);
+  border-radius: calc(var(--radius) + 6px);
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease;
+}
+.tile:hover { background: var(--surface-2); }
+.tile--active {
+  border-color: var(--accent-cream);
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--accent-cream) 45%, transparent);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
